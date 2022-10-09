@@ -1,0 +1,249 @@
+.wrapper {
+  width: 100vw;
+  display: grid;
+  grid-template-areas:
+    "header"
+    "main"
+    "footer";
+  overflow: hidden;
+}
+.header_container {
+  display: grid;
+  background-image: url(./Images/globe_image.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  max-width: 100%;
+  grid-area: header;
+  font-family: "Roboto", sans-serif;
+}
+.header_menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px 70px 10px 70px;
+  color: white;
+  font-weight: 100;
+}
+.header_burger {
+  display: none;
+}
+.logo {
+  max-width: 100%;
+}
+.header_list {
+  display: flex;
+  flex-direction: row;
+}
+.header_list li {
+  list-style: none;
+  margin: 0 0 0 40px;
+}
+li a {
+  text-decoration: none;
+  color: white;
+  font-size: smaller;
+}
+.user_info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-basis: 10%;
+  font-size: smaller;
+}
+.user_info img {
+  max-width: 100%;
+}
+.header_main {
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  max-width: 100%;
+  margin-top: 20px;
+}
+.title {
+  font-weight: 700;
+  text-align: center;
+  color: white;
+  margin: 80px 80px 50px 80px;
+}
+#button {
+  display: grid;
+  background-color: #7b61ff;
+  color: white;
+  border-radius: 20px;
+  border: none;
+  padding: 20px 15px 20px 15px;
+  max-width: 100%;
+  margin: auto;
+}
+#search {
+  display: grid;
+  background-color: white;
+  color: black;
+  border-radius: 20px;
+  border: none;
+  padding: 2% 30% 2% 30%;
+  max-width: 100%;
+  margin: auto;
+}
+.main {
+  margin: 0 10% 5% 10%;
+  font-family: "Roboto", sans-serif;
+  grid-area: main;
+  display: grid;
+}
+.main section {
+  display: grid;
+  padding: 7%;
+  width: 100%;
+}
+.destinations {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 5px;
+}
+.destinations div img {
+  max-width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 5%;
+}
+.activities {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 10px;
+  border-top: 30px;
+}
+.activities div img {
+  max-width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 5%;
+}
+.footer {
+  display: grid;
+  width: 100vw;
+  grid-area: footer;
+  background-color: rgb(243, 243, 243);
+  grid-template-columns: 25% 1fr 1fr 1fr 25%;
+  font-weight: 100;
+  font-family: "Roboto", sans-serif;
+  font-size: smaller;
+  margin-top: 10%;
+}
+.section1 {
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  margin: 5%;
+}
+.logos {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 10px;
+}
+.section2 {
+  margin-top: 20px;
+}
+.section2 h6 {
+  margin-left: 40px;
+}
+.section2 li {
+  list-style: none;
+}
+.section2 a {
+  color: black;
+}
+.section3 {
+  margin-top: 20px;
+}
+.section3 h6 {
+  margin-left: 40px;
+}
+.section3 li {
+  list-style: none;
+}
+.section3 a {
+  color: black;
+}
+.section4 {
+  margin-top: 20px;
+}
+.section4 h6 {
+  margin-left: 40px;
+}
+.section4 li {
+  list-style: none;
+}
+.section4 a {
+  color: black;
+}
+.section5 {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+}
+.section5 h6 {
+  font-size: larger;
+}
+#email {
+  background-color: white;
+  color: black;
+  border-radius: 20px;
+  border: none;
+  padding: 5% 15% 5% 15%;
+  max-width: 100%;
+}
+@media screen and (max-width: 767px) {
+  .wrapper {
+    max-width: 100%;
+    overflow: hidden;
+  }
+  .header_burger {
+    display: block;
+  }
+  .menu,
+  .user_info,
+  #button,
+  #subtitle,
+  .activities,
+  .footer {
+    display: none;
+  }
+  .destinations {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+    border-top: 30px;
+    gap: 7%;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .header_burger {
+    display: block;
+  }
+  .menu,
+  .user_info,
+  .section3,
+  .section4 {
+    display: none;
+  }
+  .destinations {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 30px;
+    border-top: 30px;
+  }
+  .activities {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 30px;
+    border-top: 30px;
+  }
+  .footer {
+    font-size: larger;
+    gap: 10%;
+  }
+}
